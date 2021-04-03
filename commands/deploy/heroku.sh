@@ -1,9 +1,9 @@
 #!/bin/bash
 
-declare heroku_key="b04225cb-e8f1-4bbe-be04-0ac68d996849"
-declare projects_path="/home/$USER/Documentos/Projects/SaveMoney/"
-declare -a projects=([1]="api" [2]="frontend" [3]="telegram")
-declare -a alias_repositories=([1]="api" [2]="web" [3]="bot")
+declare heroku_key="HEROKU_KEY"
+declare projects_path="PROJECTS_PATH"
+declare -a projects=(PROJECTS)
+declare -a alias_repositories=(ALIAS_REPOSITORIES)
 
 echo "Escolha o projeto para deploy"
 
