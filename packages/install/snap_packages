@@ -1,0 +1,11 @@
+###############
+### Utility ###
+###############
+
+snap install discord;
+
+#################
+### Developer ###
+#################
+
+# sudo snap install dbeaver-ce;

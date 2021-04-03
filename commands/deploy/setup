@@ -1,0 +1,10 @@
+########################
+### Utils for deploy ###
+########################
+
+function deploy(){
+	SCRIPT_PATH="${BASH_SOURCE[0]}"
+    if [[ $@ == "heroku" ]]; then
+		source SCRIPT_PATH/deploy/heroku.sh
+	fi
+}
