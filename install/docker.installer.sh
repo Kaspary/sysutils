@@ -1,0 +1,10 @@
+echo 'Installing docker';
+sudo apt-get update;
+sudo apt-get remove docker docker-engine docker.io;
+sudo apt install docker.io;
+sudo groupadd docker;
+sudo usermod -aG docker $USER;
+newgrp docker;
+docker run hello-world;
+sudo systemctl enable docker;
+sudo systemctl disable docker;

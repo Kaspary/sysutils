@@ -1,2 +1,0 @@
-sudo apt purge skanlite -y;
-sudo apt purge gwenview -y;
