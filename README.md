@@ -1,5 +1,5 @@
-[commit-shield]: https://img.shields.io/github/last-commit/Kaspary/feedget-nlw-rocketseat?style=for-the-badge&logo=GitHub
-[commit-url]: https://github.com/Kaspary/chat-websockets/commits/main
+[commit-shield]: https://img.shields.io/github/last-commit/Kaspary/sysutils?style=for-the-badge&logo=GitHub
+[commit-url]: https://github.com/Kaspary/sysutils/commits/main
 [linkedin-shield]: https://img.shields.io/badge/-João%20Pedro%20Kaspary-6633cc?style=for-the-badge&logo=Linkedin&colorB=2366c2
 [linkedin-url]: https://linkedin.com/in/joao-pedro-kaspary
 [github-shield]: https://img.shields.io/github/followers/Kaspary?label=João%20Pedro%20Kaspary&style=for-the-badge&logo=GitHub
