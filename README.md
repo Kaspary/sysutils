@@ -40,7 +40,7 @@ wget -qO- https://raw.githubusercontent.com/kaspary/sysutils/main/config/sysutil
 
 ## Project Struct
 
-```bash
+```
 sysutils
 ├── alias
 │   └── utils.alias.sh
