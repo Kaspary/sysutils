@@ -16,12 +16,12 @@ To get the scripts, using `wget` or `curl`.
 ## Usage
 With `wget`
 ```
-wget -qO- https://raw.githubusercontent.com/kaspary/sysutils/<path_to_script> | bash
+wget -qO- https://raw.githubusercontent.com/kaspary/sysutils/main/<path_to_script> | bash
 ```
 
 Or using `curl`
 ```
-curl -L https://raw.githubusercontent.com/kaspary/sysutils/<path_to_script> | bash
+curl -L https://raw.githubusercontent.com/kaspary/sysutils/main/<path_to_script> | bash
 ```
 Where `<path_to_script>` is the path to script from project root.
 
@@ -30,10 +30,10 @@ Where `<path_to_script>` is the path to script from project root.
 
 Runing `sysutilsrc.config.sh` script.
 ```
-wget -qO- https://raw.githubusercontent.com/kaspary/sysutils/config/sysutilsrc.config.sh | bash
+wget -qO- https://raw.githubusercontent.com/kaspary/sysutils/main/config/sysutilsrc.config.sh | bash
 ```
 
 Runing `utils.alias.sh` script.
 ```
-wget -qO- https://raw.githubusercontent.com/kaspary/sysutils/config/sysutilsrc.config.sh | bash
+wget -qO- https://raw.githubusercontent.com/kaspary/sysutils/main/config/sysutilsrc.config.sh | bash
 ```

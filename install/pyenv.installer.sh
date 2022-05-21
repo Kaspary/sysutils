@@ -7,7 +7,7 @@ sudo apt-get install -y build-essential libssl-dev zlib1g-dev libbz2-dev \
     libncurses5-dev tk-dev tcl-dev blt-dev libgdbm-dev git \
     python-dev python3-dev aria2;
 
-wget -qO- https://raw.githubusercontent.com/kaspary/sysutils/config/sysutilsrc.config.sh | bash;
+wget -qO- https://raw.githubusercontent.com/kaspary/sysutils/main/config/sysutilsrc.config.sh | bash;
 
 wget -qO- https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash;
 
