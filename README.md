@@ -37,3 +37,22 @@ Runing `utils.alias.sh` script.
 ```
 wget -qO- https://raw.githubusercontent.com/kaspary/sysutils/main/config/sysutilsrc.config.sh | bash
 ```
+
+## Project Struct
+
+```bash
+sysutils
+├── alias
+│   └── utils.alias.sh
+├── config
+│   ├── sysutilsrc.config.sh
+│   └── tmp.config.sh
+├── deploy
+│   ├── aws.lambda.deploy.sh
+│   └── heroku.deploy.sh
+├── install
+│   ├── docker.installer.sh
+│   ├── nvm.installer.sh
+│   └── pyenv.installer.sh
+└── README.md
+```

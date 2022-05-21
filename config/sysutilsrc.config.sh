@@ -8,3 +8,5 @@ touch $sysutils/sysutilsrc
 
 # Add .sysutilsrc in .bashrc if not exists
 grep -qxF "$rcline" $bashrc || printf "\n$rcline\n" >> $bashrc;
+
+source $bashrc;

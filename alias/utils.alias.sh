@@ -9,3 +9,5 @@ wget -qO- https://raw.githubusercontent.com/kaspary/sysutils/main/config/sysutil
 for command in "${commands[@]}"; do
     grep -qxF "$command" $sysutilsrc || printf "\n$command\n" >> $sysutilsrc;
 done
+
+source $sysutilsrc;
