@@ -11,7 +11,7 @@ wget -qO- https://raw.githubusercontent.com/kaspary/sysutils/main/config/sysutil
 
 wget -qO- https://raw.githubusercontent.com/pyenv/pyenv-installer/master/bin/pyenv-installer | bash;
 
-declare rcline='export PYTHON_BUILD_ARIA2_OPTS="-x 10 -k 1M"export PATH="~/.pyenv/bin:$PATH"eval "$(pyenv init --path)"eval "$(pyenv init -)"eval "$(pyenv virtualenv-init -)"';
+declare rcline='export PYTHON_BUILD_ARIA2_OPTS="-x 10 -k 1M"export PATH="$HOME/.pyenv/bin:$PATH"eval "$(pyenv init --path)"eval "$(pyenv init -)"eval "$(pyenv virtualenv-init -)"';
 
 grep -qxF "$rcline" $sysutilsrc || printf "\n$rcline\n" >> $sysutilsrc;
 
