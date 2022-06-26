@@ -1,7 +1,7 @@
 echo 'Installing docker';
 sudo apt-get update;
 sudo apt-get remove docker docker-engine docker.io -y;
-sudo apt install docker.io -y;
+sudo apt install docker.io docker-compose -y;
 sudo groupadd docker;
 sudo usermod -aG docker $USER;
 newgrp docker;
