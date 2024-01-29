@@ -1,3 +1,5 @@
+#!/bin/bash
+
 declare directory='./'
 declare profile='default'
 declare function=''

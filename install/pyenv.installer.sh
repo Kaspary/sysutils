@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # https://github.com/pyenv/pyenv
 
 declare sysutilsrc=$HOME/.sysutils/sysutilsrc;

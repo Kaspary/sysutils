@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # Config global git acount and password cache of git to 1 hour
 
 read -p 'Name: ' name;

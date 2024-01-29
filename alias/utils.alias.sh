@@ -1,3 +1,5 @@
+#!/bin/bash
+
 declare sysutilsrc=$HOME/.sysutils/sysutilsrc;
 
 declare -a commands=(

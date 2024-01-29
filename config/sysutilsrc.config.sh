@@ -1,3 +1,5 @@
+#!/bin/bash
+
 declare bashrc=$HOME/.bashrc
 declare sysutils=$HOME/.sysutils;
 declare rcline="source ${HOME}/.sysutils/sysutilsrc"

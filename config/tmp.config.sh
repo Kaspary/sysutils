@@ -1,9 +1,11 @@
+#!/bin/bash
+
 declare tmpScript=$HOME/.sysutils/clear_tmp_folder.sh;
 declare autostartFile=$HOME/.config/autostart/clear-tmp-folder.desktop;
 
 touch $tmpScript;
-echo "rm -rf $HOME/Downloads/tmp/" > $tmpScript;
-echo "mkdir $HOME/Downloads/tmp" >> $tmpScript;
+echo "gio trash $HOME/Downloads/tmp/;" > $tmpScript;
+echo "mkdir $HOME/Downloads/tmp;" >> $tmpScript;
 
 
 cat <<EOF > $autostartFile
