@@ -4,7 +4,7 @@ echo 'Installing docker';
 sudo apt-get update;
 sudo apt-get remove docker docker-engine docker.io -y;
 sudo apt install docker.io docker-compose -y;
-sudo groupadd docker;
+sudo groupadd docker || exit 1;
 sudo usermod -aG docker $USER;
 newgrp docker;
 docker run hello-world;
