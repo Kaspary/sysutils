@@ -4,7 +4,7 @@
 # https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#oh-my-zsh
 
 
-sudo apt install zsh -y
+sudo apt install curl zsh -y
 rm -rf $HOME/.oh-my-zsh
 
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)";
@@ -14,3 +14,5 @@ sudo curl --output-dir /usr/local/share/fonts/ -O https://raw.githubusercontent.
 
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k;
 echo "source ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k/powerlevel10k.zsh-theme" >> ~/.zshrc;
+
+chsh -s $(which zsh)
