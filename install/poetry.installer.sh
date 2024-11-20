@@ -14,8 +14,8 @@ curl -sSL https://install.python-poetry.org | python3 -;
 declare rcline='export PATH="$HOME/.local/bin:$PATH"';
 grep -qxF "$rcline" $sysutilsrc || printf "\n$rcline\n" >> $sysutilsrc;
 
+source $sysutilsrc;
+
 poetry config virtualenvs.in-project true;
 poetry config virtualenvs.prefer-active-python true;
 poetry config virtualenvs.path .venv;
-
-source $sysutilsrc;
