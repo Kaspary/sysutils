@@ -7,6 +7,8 @@ sudo apt install python3-pip;
 
 wget -qO- https://raw.githubusercontent.com/kaspary/sysutils/main/config/sysutilsrc.config.sh | bash;
 
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh;
+source $HOME/.cargo/env;
 
 curl -sSL https://install.python-poetry.org | python3 -;
 declare rcline='export PATH="$HOME/.local/bin:$PATH"';
