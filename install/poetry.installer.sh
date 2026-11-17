@@ -1,21 +1,31 @@
 #!/bin/bash
 
+# https://python-poetry.org/docs/#installing-with-the-official-installer
+
+set -euo pipefail
+
 declare sysutilsrc=$HOME/.sysutils/sysutilsrc;
+declare script_dir; script_dir=$(cd "$(dirname "${BASH_SOURCE[0]:-$0}")" && pwd);
 
-sudo apt update;
-sudo apt install python3-pip;
+if [[ -f $script_dir/../config/sysutilsrc.config.sh ]]; then
+    bash "$script_dir/../config/sysutilsrc.config.sh";
+else
+    wget -qO- https://raw.githubusercontent.com/kaspary/sysutils/main/config/sysutilsrc.config.sh | bash;
+fi
 
-wget -qO- https://raw.githubusercontent.com/kaspary/sysutils/main/config/sysutilsrc.config.sh | bash;
-
-curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh;
-source $HOME/.cargo/env;
+# The installer needs python3 with venv
+if ! python3 -c 'import venv, ensurepip' 2>/dev/null; then
+    sudo apt update;
+    sudo apt install -y python3 python3-venv;
+fi
 
 curl -sSL https://install.python-poetry.org | python3 -;
+
 declare rcline='export PATH="$HOME/.local/bin:$PATH"';
-grep -qxF "$rcline" $sysutilsrc || printf "\n$rcline\n" >> $sysutilsrc;
+grep -qxF "$rcline" "$sysutilsrc" || printf "%s\n" "$rcline" >> "$sysutilsrc";
+export PATH="$HOME/.local/bin:$PATH";
 
-source $sysutilsrc;
-
+# Create the virtualenv in the project (.venv). Since Poetry 2.0 the active python is used by default.
 poetry config virtualenvs.in-project true;
-poetry config virtualenvs.prefer-active-python true;
-poetry config virtualenvs.path .venv;
+
+poetry --version;

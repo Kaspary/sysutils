@@ -1,33 +1,22 @@
 #!/bin/bash
 
+# Creates ~/.sysutils/sysutilsrc and sources it from ~/.bashrc and ~/.zshrc.
+# Other scripts append their shell settings (aliases, PATH, ...) to sysutilsrc.
+
 declare bashrc=$HOME/.bashrc
 declare zshrc=$HOME/.zshrc
 declare sysutils=$HOME/.sysutils
 declare rcline="source ${HOME}/.sysutils/sysutilsrc"
 
 # Create folder sysutils if not exist, and sysutilsrc
-mkdir -p $sysutils
-touch $sysutils/sysutilsrc
+mkdir -p "$sysutils"
+touch "$sysutils/sysutilsrc"
 
-# Add .sysutilsrc in .bashrc if not exists
-if [[ -f $bashrc ]]; then
-    grep -qxF "$rcline" $bashrc || printf "\n$rcline\n" >> $bashrc
-fi
+# Add sysutilsrc in .bashrc and .zshrc if not exists
+for rc in "$bashrc" "$zshrc"; do
+    if [[ -f $rc ]]; then
+        grep -qxF "$rcline" "$rc" || printf "\n%s\n" "$rcline" >> "$rc"
+    fi
+done
 
-# Add .sysutilsrc in .zshrc if not exists
-if [[ -f $zshrc ]]; then
-    grep -qxF "$rcline" $zshrc || printf "\n$rcline\n" >> $zshrc
-fi
-
-# Source the appropriate shell configuration file
-if [[ $SHELL =~ "zsh" && -f $zshrc ]]; then
-    source $zshrc
-elif [[ -f $bashrc ]]; then
-    source $bashrc
-fi
-
-asdf plugin-add python;
-
-asdf plugin add nodejs https://github.com/asdf-vm/asdf-nodejs.git
-
-echo "Configuration added to shell startup files."
+echo "sysutilsrc configured. Open a new terminal to load it."
