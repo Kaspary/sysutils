@@ -25,6 +25,17 @@ curl -L https://raw.githubusercontent.com/kaspary/sysutils/main/<path_to_script>
 ```
 Where `<path_to_script>` is the path to script from project root.
 
+Or from a local clone
+```
+bash <path_to_script>
+```
+
+Scripts that change the shell (aliases, PATH, completions) write to `~/.sysutils/sysutilsrc`,
+which is sourced by `~/.bashrc` and `~/.zshrc`. Open a new terminal after running them.
+
+Suggested order: `zsh.installer.sh` replaces `~/.zshrc`, so run it before the others
+(it adds `sysutilsrc` back anyway). `yarn.installer.sh` installs Node.js LTS with asdf when Node.js is missing.
+
 
 ## Examples
 
@@ -35,7 +46,7 @@ wget -qO- https://raw.githubusercontent.com/kaspary/sysutils/main/config/sysutil
 
 Runing `utils.alias.sh` script.
 ```
-wget -qO- https://raw.githubusercontent.com/kaspary/sysutils/main/config/sysutilsrc.config.sh | tr -d '\r' | bash
+wget -qO- https://raw.githubusercontent.com/kaspary/sysutils/main/alias/utils.alias.sh | tr -d '\r' | bash
 ```
 
 ## Project Struct
@@ -53,12 +64,14 @@ sysutils
 │   └── heroku.deploy.sh
 ├── install
 │   ├── asdf.installer.sh
+│   ├── code.installer.sh
 │   ├── docker.installer.sh
 │   ├── githubcli.installer.sh
 │   ├── nvm.installer.sh
 │   ├── poetry.installer.sh
 │   ├── pyenv.installer.sh
+│   ├── tilix.installer.sh
 │   ├── yarn.installer.sh
-│   └── zsh.isntaller.sh
+│   └── zsh.installer.sh
 └── README.md
 ```
