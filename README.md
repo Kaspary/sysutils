@@ -38,6 +38,12 @@ Runing `utils.alias.sh` script.
 wget -qO- https://raw.githubusercontent.com/kaspary/sysutils/main/config/sysutilsrc.config.sh | tr -d '\r' | bash
 ```
 
+Running `logitech.installer.sh` script (Solaar + mouse following the keyboard Easy-Switch).
+It asks for the keyboard Bluetooth address, the mouse name and the channel of the other computer.
+```
+wget -qO- https://raw.githubusercontent.com/kaspary/sysutils/main/install/logitech.installer.sh | tr -d '\r' | bash
+```
+
 ## Project Struct
 
 ```
@@ -55,6 +61,7 @@ sysutils
 │   ├── asdf.installer.sh
 │   ├── docker.installer.sh
 │   ├── githubcli.installer.sh
+│   ├── logitech.installer.sh
 │   ├── nvm.installer.sh
 │   ├── poetry.installer.sh
 │   ├── pyenv.installer.sh
