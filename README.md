@@ -38,6 +38,14 @@ Runing `utils.alias.sh` script.
 wget -qO- https://raw.githubusercontent.com/kaspary/sysutils/main/config/sysutilsrc.config.sh | tr -d '\r' | bash
 ```
 
+Running `ubuntu.config.sh` script (Ubuntu desktop with my preferences: Mac-like keyboard with Toshy,
+KeePass vault synced from Google Drive, Paseo, Ulauncher and Handy).
+Pass step names to run only some of them. See [docs/ubuntu.config.md](docs/ubuntu.config.md).
+```
+wget -qO- https://raw.githubusercontent.com/kaspary/sysutils/main/config/ubuntu.config.sh | tr -d '\r' | bash
+wget -qO- https://raw.githubusercontent.com/kaspary/sysutils/main/config/ubuntu.config.sh | tr -d '\r' | bash -s -- keyboard toshy
+```
+
 ## Project Struct
 
 ```
@@ -47,10 +55,13 @@ sysutils
 ├── config
 │   ├── git.config.sh
 │   ├── sysutilsrc.config.sh
-│   └── tmp.config.sh
+│   ├── tmp.config.sh
+│   └── ubuntu.config.sh
 ├── deploy
 │   ├── aws.lambda.deploy.sh
 │   └── heroku.deploy.sh
+├── docs
+│   └── ubuntu.config.md
 ├── install
 │   ├── asdf.installer.sh
 │   ├── docker.installer.sh
